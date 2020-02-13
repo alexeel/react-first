@@ -1,8 +1,26 @@
 import React, { Component } from 'react'
-import { Navbar, Container, Nav, NavLink, Form, FormControl, Button } from 'react-bootstrap'
-import logo from '../logo.svg'
-import NavbarToggle from 'react-bootstrap/NavbarToggle'
-import NavbarCollapse from 'react-bootstrap/NavbarCollapse'
+import { 
+	Navbar,
+	Container,
+	Nav,
+	Form,
+	FormControl,
+	Button 
+} from 'react-bootstrap';
+
+import logo from '../logo.svg';
+import NavbarToggle from 'react-bootstrap/NavbarToggle';
+import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
+import {
+	BrowserRouter as Router,
+	Switch,
+	Route
+} from "react-router-dom";
+
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Blog from "../pages/Blog";
+import Contacts from "../pages/Contacts";
 
 export default class Header extends Component {
 	render() {
@@ -39,6 +57,14 @@ export default class Header extends Component {
 
 					</Container>
 				</Navbar>
+				<Router>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route exact path="/about" component={About} />
+						<Route exact path="/blog" component={Blog} />
+						<Route exact path="/contacts" component={Contacts} />
+					</Switch>
+				</Router>
 			</>
 		)
 	}
