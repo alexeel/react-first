@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { 
+import {
 	Navbar,
 	Container,
 	Nav,
 	Form,
 	FormControl,
-	Button 
+	Button
 } from 'react-bootstrap';
 
 import logo from '../logo.svg';
@@ -26,7 +26,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<>
-				<Navbar fixed="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+				<Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
 					<Container>
 						<Navbar.Brand href="/">
 							<img
